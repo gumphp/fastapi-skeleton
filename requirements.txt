@@ -1,6 +1,5 @@
 APScheduler
 fastapi[standard]
-jose
 loguru
 peewee
 pymysql
