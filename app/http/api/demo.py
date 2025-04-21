@@ -35,5 +35,5 @@ def redis_test():
 
 
 @router.get("/show")
-def show(id: str):
+def show(id: int):
     return success({"id": id})
