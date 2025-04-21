@@ -8,4 +8,5 @@ def boot(app):
     # 打印路由
     if app.debug:
         for route in app.routes:
-            print({'path': route.path, 'name': route.name, 'methods': route.methods})
+            pass
+            #print({'path': route.path, 'name': route.name, 'methods': route.methods})
