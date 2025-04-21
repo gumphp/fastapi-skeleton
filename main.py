@@ -2,10 +2,10 @@ from bootstrap.application import create_app
 from config.config import settings
 import uvicorn
 
-# 导入bcrypt补丁
-from app.patches import bcrypt_patch
-# 导入警告过滤模块
-from app.patches import warnings_filter
+# 不再需要bcrypt补丁
+# from app.patches import bcrypt_patch
+# 仍然保留警告过滤模块以防其他警告
+# from app.patches import warnings_filter
 
 app = create_app()
 
