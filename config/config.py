@@ -17,10 +17,12 @@ class Settings(BaseSettings):
     URL: str = "http://localhost"
     TIME_ZONE: str = "RPC"
 
-    class Config:
-        env_prefix = 'APP_'
-        env_file = ".env"
-        env_file_encoding = 'utf-8'
+    model_config = {
+        "extra": "allow",
+        "env_prefix": 'APP_',
+        "env_file": ".env",
+        "env_file_encoding": 'utf-8'
+    }
 
 
 settings = Settings()

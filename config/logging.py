@@ -11,9 +11,11 @@ class Settings(BaseSettings):
     LOG_PATH: str = app_settings.BASE_PATH + "/storage/logs/fastapi-{time:YYYY-MM-DD}.log"
     LOG_RETENTION: str = "14 days"
 
-    class Config:
-        env_file = ".env"
-        env_file_encoding = 'utf-8'
+    model_config = {
+        "extra": "allow",
+        "env_file": ".env",
+        "env_file_encoding": 'utf-8'
+    }
 
 
 settings = Settings()

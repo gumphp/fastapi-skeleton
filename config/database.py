@@ -10,8 +10,10 @@ class Settings(BaseSettings):
     DB_USER: str = 'root'
     DB_PASSWORD: str = '123456'
 
-    class Config:
-        env_file = ".env"
+    model_config = {
+        "extra": "allow",
+        "env_file": ".env"
+    }
 
 
 class RedisSettings(BaseSettings):
@@ -22,8 +24,10 @@ class RedisSettings(BaseSettings):
     REDIS_DB: int = 0
     REDIS_PASSWORD: Optional[str] = None
 
-    class Config:
-        env_file = ".env"
+    model_config = {
+        "extra": "allow",
+        "env_file": ".env"
+    }
 
 
 settings = Settings()
